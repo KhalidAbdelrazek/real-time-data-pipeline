@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/.venv/bin/python3" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())

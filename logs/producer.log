@@ -1,0 +1,23 @@
+2026-06-23 02:41:53,251 | INFO | retail_producer | Connecting to Kafka at localhost:9092
+2026-06-23 02:41:53,255 | INFO | kafka.conn | <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-06-23 02:41:53,255 | INFO | kafka.conn | Probing node bootstrap-0 broker version
+2026-06-23 02:41:53,256 | INFO | kafka.conn | <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-06-23 02:41:53,363 | INFO | kafka.conn | Broker version identified as 2.5.0
+2026-06-23 02:41:53,364 | INFO | kafka.conn | Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2026-06-23 02:41:53,367 | INFO | retail_producer | Streaming to topic 'retail_events' at about 20.00 events/sec
+2026-06-23 02:41:53,395 | INFO | kafka.conn | <BrokerConnection node_id=0 host=khalidabdelrazk-HP-ZBook-15-G4:9092 <connecting> [IPv4 ('127.0.1.1', 9092)]>: connecting to khalidabdelrazk-HP-ZBook-15-G4:9092 [('127.0.1.1', 9092) IPv4]
+2026-06-23 02:41:53,396 | INFO | kafka.conn | <BrokerConnection node_id=0 host=khalidabdelrazk-HP-ZBook-15-G4:9092 <connecting> [IPv4 ('127.0.1.1', 9092)]>: Connection complete.
+2026-06-23 02:41:53,396 | INFO | kafka.conn | <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2026-06-23 02:43:48,164 | INFO | retail_producer | Graceful shutdown requested.
+2026-06-23 02:43:48,169 | INFO | kafka.producer.kafka | Closing the Kafka producer with 30 secs timeout.
+2026-06-23 02:43:48,169 | INFO | kafka.conn | <BrokerConnection node_id=0 host=khalidabdelrazk-HP-ZBook-15-G4:9092 <connected> [IPv4 ('127.0.1.1', 9092)]>: Closing connection. 
+2026-06-23 02:47:50,524 | INFO | retail_producer | Connecting to Kafka at localhost:9092
+2026-06-23 02:47:50,526 | INFO | kafka.conn | <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-06-23 02:47:50,526 | INFO | kafka.conn | Probing node bootstrap-0 broker version
+2026-06-23 02:47:50,527 | INFO | kafka.conn | <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-06-23 02:47:50,631 | INFO | kafka.conn | Broker version identified as 2.5.0
+2026-06-23 02:47:50,631 | INFO | kafka.conn | Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2026-06-23 02:47:50,635 | INFO | retail_producer | Streaming to topic 'retail_events' at about 20.00 events/sec
+2026-06-23 02:47:50,665 | INFO | kafka.conn | <BrokerConnection node_id=0 host=khalidabdelrazk-HP-ZBook-15-G4:9092 <connecting> [IPv4 ('127.0.1.1', 9092)]>: connecting to khalidabdelrazk-HP-ZBook-15-G4:9092 [('127.0.1.1', 9092) IPv4]
+2026-06-23 02:47:50,666 | INFO | kafka.conn | <BrokerConnection node_id=0 host=khalidabdelrazk-HP-ZBook-15-G4:9092 <connecting> [IPv4 ('127.0.1.1', 9092)]>: Connection complete.
+2026-06-23 02:47:50,666 | INFO | kafka.conn | <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
