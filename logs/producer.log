@@ -488,3 +488,12 @@
 2026-06-23 17:42:29,924 | INFO | retail_producer | Sent 8000 events. Latest type=product_view timestamp=2023-07-29T14:20:41+00:00
 2026-06-23 17:42:37,691 | INFO | retail_producer | Sent 8100 events. Latest type=product_view timestamp=2025-03-25T11:40:42+00:00
 2026-06-23 17:42:45,467 | INFO | retail_producer | Sent 8200 events. Latest type=review timestamp=2024-01-19T05:09:39+00:00
+2026-06-23 17:42:53,215 | INFO | retail_producer | Sent 8300 events. Latest type=product_view timestamp=2024-08-12T19:50:33+00:00
+2026-06-23 17:43:00,937 | INFO | retail_producer | Sent 8400 events. Latest type=product_view timestamp=2024-01-17T22:42:07+00:00
+2026-06-23 17:43:08,672 | INFO | retail_producer | Sent 8500 events. Latest type=product_view timestamp=2026-07-11T12:19:19+00:00
+2026-06-23 17:43:16,477 | INFO | retail_producer | Sent 8600 events. Latest type=product_view timestamp=2026-06-26T00:12:18+00:00
+2026-06-23 17:43:24,396 | INFO | retail_producer | Sent 8700 events. Latest type=return timestamp=2025-02-05T12:41:37+00:00
+2026-06-23 17:43:28,662 | INFO | retail_producer | Graceful shutdown requested.
+2026-06-23 17:43:28,662 | INFO | kafka.producer.kafka | Closing the Kafka producer with 30 secs timeout.
+2026-06-23 17:43:28,664 | INFO | kafka.conn | <BrokerConnection node_id=0 host=khalidabdelrazk-HP-ZBook-15-G4:9092 <connected> [IPv4 ('127.0.1.1', 9092)]>: Closing connection. 
+2026-06-23 17:43:28,665 | INFO | retail_producer | Producer closed after sending 8754 events.
