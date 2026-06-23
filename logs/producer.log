@@ -449,3 +449,4 @@
 2026-06-23 17:37:25,299 | INFO | retail_producer | Sent 4100 events. Latest type=review timestamp=2024-06-09T03:53:27+00:00
 2026-06-23 17:37:33,122 | INFO | retail_producer | Sent 4200 events. Latest type=review timestamp=2025-04-10T08:17:41+00:00
 2026-06-23 17:37:40,866 | INFO | retail_producer | Sent 4300 events. Latest type=review timestamp=2024-12-26T19:09:14+00:00
+2026-06-23 17:37:48,685 | INFO | retail_producer | Sent 4400 events. Latest type=product_view timestamp=2024-03-31T13:10:39+00:00
