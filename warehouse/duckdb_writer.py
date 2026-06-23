@@ -61,8 +61,32 @@ def write_microbatch_to_duckdb(valid_df, invalid_df, batch_id: int) -> None:
 
 # ── Transaction wrapper ───────────────────────────────────────────────────────
 
+def _ensure_schema(con) -> None:
+    """Ensure the database schema exists by bootstrapping it if missing."""
+    r = con.execute(
+        "SELECT count(*) FROM information_schema.tables WHERE table_name = 'fact_sales'"
+    ).fetchone()
+    if not r or r[0] == 0:
+        logger.info("Database schema not found. Bootstrapping schema from DDL file...")
+        schema_path = Path(__file__).parent / "create_tables.sql"
+        if schema_path.exists():
+            with open(schema_path, "r", encoding="utf-8") as f:
+                con.execute(f.read())
+            logger.info("Database schema initialized successfully.")
+        else:
+            logger.error("Schema DDL file not found at %s", schema_path)
+
+
 def _commit_batch(valid_rows, invalid_rows, batch_id):
     con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+    _ensure_schema(con)
+    # Temporarily drop indexes on non-PK columns being updated to bypass DuckDB issue #20246.
+    # This must be done outside the transaction block because DuckDB constraint checking
+    # inside a transaction does not register transactional index drops immediately.
+    if valid_rows:
+        con.execute("DROP INDEX IF EXISTS ix_dim_cust_country")
+        con.execute("DROP INDEX IF EXISTS ix_dim_prod_category")
+        con.execute("DROP INDEX IF EXISTS ix_dim_store_country")
     try:
         con.execute("BEGIN TRANSACTION")
         if invalid_rows:
@@ -74,6 +98,14 @@ def _commit_batch(valid_rows, invalid_rows, batch_id):
         con.execute("ROLLBACK")
         raise
     finally:
+        # Recreate the exact same indexes outside the transaction so schema definition at-rest remains identical
+        if valid_rows:
+            try:
+                con.execute("CREATE INDEX IF NOT EXISTS ix_dim_cust_country ON dim_customer (customer_country, customer_city)")
+                con.execute("CREATE INDEX IF NOT EXISTS ix_dim_prod_category ON dim_product (product_category)")
+                con.execute("CREATE INDEX IF NOT EXISTS ix_dim_store_country ON dim_store (store_country, store_city)")
+            except Exception:
+                pass
         con.close()
 
 
@@ -111,34 +143,39 @@ def _upsert_customers(con, rows) -> dict[str, int]:
     con.executemany("INSERT INTO _sc VALUES (?,?,?,?,?,?)", records)
 
     base = _next_key(con, "dim_customer", "customer_key")
-    
+    # Step 1: insert only rows whose customer_id is not yet in dim_customer.
+    # now() is used instead of the bare current_timestamp keyword because
+    # DuckDB's binder can misread the bare keyword as a column reference in
+    # some statement contexts.
     con.execute(f"""
         INSERT INTO dim_customer (
             customer_key, customer_id, customer_name, customer_age,
             customer_gender, customer_country, customer_city, updated_at
         )
-        SELECT 
-            {base} + row_number() OVER (),
-            s.customer_id, s.customer_name, s.customer_age,
-            s.customer_gender, s.customer_country, s.customer_city,
-            current_timestamp
+        SELECT {base} + row_number() OVER (),
+               s.customer_id, s.customer_name, s.customer_age,
+               s.customer_gender, s.customer_country, s.customer_city,
+               now()
         FROM _sc s
-        ON CONFLICT (customer_id) DO UPDATE SET
-            customer_name    = EXCLUDED.customer_name,
-            customer_age     = EXCLUDED.customer_age,
-            customer_gender  = EXCLUDED.customer_gender,
-            customer_country = EXCLUDED.customer_country,
-            customer_city    = EXCLUDED.customer_city,
-            updated_at       = current_timestamp
-        WHERE (
-               dim_customer.customer_name    != EXCLUDED.customer_name
-            OR dim_customer.customer_age     != EXCLUDED.customer_age
-            OR dim_customer.customer_gender  IS DISTINCT FROM EXCLUDED.customer_gender
-            OR dim_customer.customer_country IS DISTINCT FROM EXCLUDED.customer_country
-            OR dim_customer.customer_city    IS DISTINCT FROM EXCLUDED.customer_city
-        )
+        WHERE NOT EXISTS (SELECT 1 FROM dim_customer d WHERE d.customer_id = s.customer_id)
     """)
-    
+    # Step 2: SCD-1 — overwrite attributes for existing customers only if changed.
+    con.execute("""
+        UPDATE dim_customer AS d
+        SET customer_name    = s.customer_name,
+            customer_age     = s.customer_age,
+            customer_gender  = s.customer_gender,
+            customer_country = s.customer_country,
+            customer_city    = s.customer_city,
+            updated_at       = now()
+        FROM _sc s
+        WHERE d.customer_id = s.customer_id
+          AND (d.customer_name != s.customer_name
+            OR d.customer_age != s.customer_age
+            OR d.customer_gender IS DISTINCT FROM s.customer_gender
+            OR d.customer_country IS DISTINCT FROM s.customer_country
+            OR d.customer_city IS DISTINCT FROM s.customer_city)
+    """)
     return dict(con.execute(
         "SELECT d.customer_id, d.customer_key FROM dim_customer d JOIN _sc s USING (customer_id)"
     ).fetchall())
@@ -163,15 +200,20 @@ def _upsert_products(con, rows) -> dict[str, int]:
             (product_key, product_id, product_name, product_category, brand, supplier, updated_at)
         SELECT {base} + row_number() OVER (),
                s.product_id, s.product_name, s.product_category,
-               s.brand, s.supplier, current_timestamp
+               s.brand, s.supplier, now()
         FROM _sp s
         WHERE NOT EXISTS (SELECT 1 FROM dim_product d WHERE d.product_id = s.product_id)
     """)
     con.execute("""
         UPDATE dim_product AS d
         SET product_name=s.product_name, product_category=s.product_category,
-            brand=s.brand, supplier=s.supplier, updated_at=current_timestamp
-        FROM _sp s WHERE d.product_id = s.product_id
+            brand=s.brand, supplier=s.supplier, updated_at=now()
+        FROM _sp s
+        WHERE d.product_id = s.product_id
+          AND (d.product_name != s.product_name
+            OR d.product_category != s.product_category
+            OR d.brand IS DISTINCT FROM s.brand
+            OR d.supplier IS DISTINCT FROM s.supplier)
     """)
     return dict(con.execute(
         "SELECT d.product_id, d.product_key FROM dim_product d JOIN _sp s USING (product_id)"
@@ -194,15 +236,19 @@ def _upsert_stores(con, rows) -> dict[str, int]:
     con.execute(f"""
         INSERT INTO dim_store (store_key, store_id, store_name, store_country, store_city, updated_at)
         SELECT {base} + row_number() OVER (),
-               s.store_id, s.store_name, s.store_country, s.store_city, current_timestamp
+               s.store_id, s.store_name, s.store_country, s.store_city, now()
         FROM _ss s
         WHERE NOT EXISTS (SELECT 1 FROM dim_store d WHERE d.store_id = s.store_id)
     """)
     con.execute("""
         UPDATE dim_store AS d
         SET store_name=s.store_name, store_country=s.store_country,
-            store_city=s.store_city, updated_at=current_timestamp
-        FROM _ss s WHERE d.store_id = s.store_id
+            store_city=s.store_city, updated_at=now()
+        FROM _ss s
+        WHERE d.store_id = s.store_id
+          AND (d.store_name != s.store_name
+            OR d.store_country != s.store_country
+            OR d.store_city != s.store_city)
     """)
     return dict(con.execute(
         "SELECT d.store_id, d.store_key FROM dim_store d JOIN _ss s USING (store_id)"
@@ -309,11 +355,11 @@ def _insert_facts(con, rows, cmap, pmap, smap, chmap, dmap):
             event_timestamp, event_hour, rating, review_text, session_id, payment_method,
             loaded_at
         )
-        SELECT 
+        SELECT
             sf.sales_key, sf.event_id, sf.customer_key, sf.product_key, sf.store_key, sf.date_key, sf.channel_key,
             sf.event_type, sf.quantity, sf.price, sf.discount, sf.final_price, sf.revenue, sf.profit_estimate,
             sf.event_timestamp, sf.event_hour, sf.rating, sf.review_text, sf.session_id, sf.payment_method,
-            current_timestamp
+            now()
         FROM _sf sf
         WHERE NOT EXISTS (SELECT 1 FROM fact_sales f WHERE f.event_id = sf.event_id)
     """)
@@ -323,13 +369,26 @@ def _insert_facts(con, rows, cmap, pmap, smap, chmap, dmap):
 
 def _insert_dead_letters(con, rows, batch_id):
     base = _next_key(con, "dead_letter_events", "dead_letter_key")
-    values = [
-        (base + i, row.get("event_id"), row.get("raw_json"),
-         row.get("reject_reason") or "schema parse failure", batch_id)
-        for i, row in enumerate(rows, 1)
-    ]
+    values = []
+    for i, row in enumerate(rows, 1):
+        # Gracefully fall back if Spark/Pandas used 'raw_json' or 'raw_payload'
+        payload = row.get("raw_json") or row.get("raw_payload") or ""
+        reason = row.get("reject_reason") or "schema parse failure"
+        
+        values.append((
+            base + i,
+            row.get("event_id"),
+            payload,
+            reason,
+            batch_id
+        ))
+        
     con.executemany(
-        "INSERT INTO dead_letter_events (dead_letter_key, event_id, raw_payload, reject_reason, batch_id) VALUES (?,?,?,?,?)",
+        """
+        INSERT INTO dead_letter_events (
+            dead_letter_key, event_id, raw_payload, reject_reason, batch_id
+        ) VALUES (?, ?, ?, ?, ?)
+        """,
         values,
     )
 

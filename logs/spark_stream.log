@@ -504,3 +504,963 @@ Traceback (most recent call last):
 py4j.protocol.Py4JNetworkError: Error while sending or receiving
 2026-06-23 03:23:51,776 | INFO | py4j.clientserver | Closing down clientserver connection
 2026-06-23 03:23:51,781 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 03:28:19,126 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 03:28:19,126 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 37843)
+2026-06-23 03:28:19,418 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 03:28:20,637 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 03:28:20,637 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 03:28:27,549 | ERROR | duckdb_writer | Batch 2 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 65, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.IOException: IO Error: Could not set lock on file "/home/khalidabdelrazk/retail_warehouse/RetailDW.duckdb": Conflicting lock is held in /snap/duckdb/9/duckdb (PID 263599) by user khalidabdelrazk. See also https://duckdb.org/docs/connect/concurrency
+2026-06-23 03:28:32,567 | ERROR | duckdb_writer | Batch 2 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 65, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.IOException: IO Error: Could not set lock on file "/home/khalidabdelrazk/retail_warehouse/RetailDW.duckdb": Conflicting lock is held in /snap/duckdb/9/duckdb (PID 263599) by user khalidabdelrazk. See also https://duckdb.org/docs/connect/concurrency
+2026-06-23 03:28:42,582 | ERROR | duckdb_writer | Batch 2 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 65, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.IOException: IO Error: Could not set lock on file "/home/khalidabdelrazk/retail_warehouse/RetailDW.duckdb": Conflicting lock is held in /snap/duckdb/9/duckdb (PID 263599) by user khalidabdelrazk. See also https://duckdb.org/docs/connect/concurrency
+2026-06-23 03:28:42,583 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 65, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.IOException: IO Error: Could not set lock on file "/home/khalidabdelrazk/retail_warehouse/RetailDW.duckdb": Conflicting lock is held in /snap/duckdb/9/duckdb (PID 263599) by user khalidabdelrazk. See also https://duckdb.org/docs/connect/concurrency
+2026-06-23 03:28:42,760 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 03:29:46,274 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 03:29:46,274 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 43109)
+2026-06-23 03:29:46,460 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 03:29:47,534 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 03:29:47,534 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 03:29:54,946 | ERROR | duckdb_writer | Batch 2 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 115, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Table "dim_customer" does not have a column named "current_timestamp"
+2026-06-23 03:30:01,272 | ERROR | duckdb_writer | Batch 2 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 115, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Table "dim_customer" does not have a column named "current_timestamp"
+2026-06-23 03:30:12,036 | ERROR | duckdb_writer | Batch 2 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 115, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Table "dim_customer" does not have a column named "current_timestamp"
+2026-06-23 03:30:12,037 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 115, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Table "dim_customer" does not have a column named "current_timestamp"
+2026-06-23 03:30:12,209 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 03:41:34,091 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 03:41:34,091 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 36075)
+2026-06-23 03:41:34,289 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 03:41:35,427 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 03:41:35,427 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 03:41:43,387 | ERROR | duckdb_writer | Batch 2 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:41:49,043 | ERROR | duckdb_writer | Batch 2 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:41:59,700 | ERROR | duckdb_writer | Batch 2 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:41:59,700 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:41:59,896 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 03:46:53,353 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 03:46:53,354 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 36233)
+2026-06-23 03:46:53,529 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 03:46:54,594 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 03:46:54,594 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 03:47:02,579 | ERROR | duckdb_writer | Batch 2 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:47:08,249 | ERROR | duckdb_writer | Batch 2 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:47:19,001 | ERROR | duckdb_writer | Batch 2 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:47:19,002 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:47:19,210 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 03:58:45,843 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 03:58:45,843 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 42457)
+2026-06-23 03:58:46,114 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 03:58:47,868 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 03:58:47,868 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 03:58:58,278 | ERROR | duckdb_writer | Batch 2 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:59:04,076 | ERROR | duckdb_writer | Batch 2 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:59:14,730 | ERROR | duckdb_writer | Batch 2 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:59:14,731 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 121, in _upsert_customers
+    con.execute(f"""
+duckdb.duckdb.BinderException: Binder Error: Can not assign to column 'customer_country' because it has a UNIQUE/PRIMARY KEY constraint
+2026-06-23 03:59:14,961 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 04:01:42,391 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 04:01:42,391 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 46195)
+2026-06-23 04:01:42,716 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 04:01:45,450 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 04:01:45,450 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:01:51,382 | INFO | duckdb_writer | Batch 0 done: 1 facts, 0 dead-letters.
+2026-06-23 04:01:51,707 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:01:54,498 | ERROR | duckdb_writer | Batch 1 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 83, in _write_valid_rows
+    smap = _upsert_stores(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 201, in _upsert_stores
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "store_key: 1" is still referenced by a foreign key in a different table
+2026-06-23 04:01:59,815 | ERROR | duckdb_writer | Batch 1 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 83, in _write_valid_rows
+    smap = _upsert_stores(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 201, in _upsert_stores
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "store_key: 1" is still referenced by a foreign key in a different table
+2026-06-23 04:02:09,960 | ERROR | duckdb_writer | Batch 1 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 83, in _write_valid_rows
+    smap = _upsert_stores(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 201, in _upsert_stores
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "store_key: 1" is still referenced by a foreign key in a different table
+2026-06-23 04:02:09,960 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 83, in _write_valid_rows
+    smap = _upsert_stores(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 201, in _upsert_stores
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "store_key: 1" is still referenced by a foreign key in a different table
+2026-06-23 04:02:10,094 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 04:04:15,675 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 04:04:15,675 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 34647)
+2026-06-23 04:04:15,999 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 04:04:18,678 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 04:04:18,678 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:04:25,008 | INFO | duckdb_writer | Batch 0 done: 1 facts, 0 dead-letters.
+2026-06-23 04:04:25,351 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:04:28,340 | INFO | duckdb_writer | Batch 1 done: 91 facts, 8 dead-letters.
+2026-06-23 04:04:30,135 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:04:32,613 | INFO | duckdb_writer | Batch 2 done: 59 facts, 3 dead-letters.
+2026-06-23 04:10:04,629 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 04:10:04,629 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 42687)
+2026-06-23 04:10:04,820 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 04:10:06,397 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 04:10:06,397 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:10:14,500 | ERROR | duckdb_writer | Batch 3 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 131, in _upsert_customers
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "customer_key: 69" is still referenced by a foreign key in a different table
+2026-06-23 04:10:20,096 | ERROR | duckdb_writer | Batch 3 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 131, in _upsert_customers
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "customer_key: 69" is still referenced by a foreign key in a different table
+2026-06-23 04:10:30,690 | ERROR | duckdb_writer | Batch 3 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 131, in _upsert_customers
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "customer_key: 69" is still referenced by a foreign key in a different table
+2026-06-23 04:10:30,691 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _write_valid_rows
+    cmap = _upsert_customers(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 131, in _upsert_customers
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "customer_key: 69" is still referenced by a foreign key in a different table
+2026-06-23 04:10:30,869 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 04:14:16,166 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 04:14:16,166 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 37285)
+2026-06-23 04:14:16,473 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 04:14:19,282 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 04:14:19,282 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:14:25,287 | INFO | duckdb_writer | Batch 0 done: 1 facts, 0 dead-letters.
+2026-06-23 04:14:25,587 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:14:28,717 | INFO | duckdb_writer | Batch 1 done: 93 facts, 5 dead-letters.
+2026-06-23 04:14:30,134 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:14:32,781 | INFO | duckdb_writer | Batch 2 done: 52 facts, 4 dead-letters.
+2026-06-23 04:14:40,127 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:14:43,207 | INFO | duckdb_writer | Batch 3 done: 113 facts, 12 dead-letters.
+2026-06-23 04:14:50,102 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:14:52,530 | ERROR | duckdb_writer | Batch 4 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 87, in _write_valid_rows
+    pmap = _upsert_products(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 185, in _upsert_products
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "product_key: 155" is still referenced by a foreign key in a different table
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 94, in _write_valid_rows
+    con.execute("CREATE INDEX IF NOT EXISTS ix_dim_cust_country ON dim_customer (customer_country, customer_city)")
+duckdb.duckdb.InvalidInputException: Invalid Input Error: Attempting to execute an unsuccessful or closed pending query result
+Error: TransactionContext Error: Current transaction is aborted (please ROLLBACK)
+2026-06-23 04:14:57,649 | ERROR | duckdb_writer | Batch 4 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 87, in _write_valid_rows
+    pmap = _upsert_products(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 185, in _upsert_products
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "product_key: 155" is still referenced by a foreign key in a different table
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 94, in _write_valid_rows
+    con.execute("CREATE INDEX IF NOT EXISTS ix_dim_cust_country ON dim_customer (customer_country, customer_city)")
+duckdb.duckdb.InvalidInputException: Invalid Input Error: Attempting to execute an unsuccessful or closed pending query result
+Error: TransactionContext Error: Current transaction is aborted (please ROLLBACK)
+2026-06-23 04:15:07,794 | ERROR | duckdb_writer | Batch 4 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 87, in _write_valid_rows
+    pmap = _upsert_products(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 185, in _upsert_products
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "product_key: 155" is still referenced by a foreign key in a different table
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 94, in _write_valid_rows
+    con.execute("CREATE INDEX IF NOT EXISTS ix_dim_cust_country ON dim_customer (customer_country, customer_city)")
+duckdb.duckdb.InvalidInputException: Invalid Input Error: Attempting to execute an unsuccessful or closed pending query result
+Error: TransactionContext Error: Current transaction is aborted (please ROLLBACK)
+2026-06-23 04:15:07,794 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 87, in _write_valid_rows
+    pmap = _upsert_products(con, rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 185, in _upsert_products
+    con.execute("""
+duckdb.duckdb.ConstraintException: Constraint Error: Violates foreign key constraint because key "product_key: 155" is still referenced by a foreign key in a different table
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 71, in _commit_batch
+    _write_valid_rows(con, valid_rows)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 94, in _write_valid_rows
+    con.execute("CREATE INDEX IF NOT EXISTS ix_dim_cust_country ON dim_customer (customer_country, customer_city)")
+duckdb.duckdb.InvalidInputException: Invalid Input Error: Attempting to execute an unsuccessful or closed pending query result
+Error: TransactionContext Error: Current transaction is aborted (please ROLLBACK)
+2026-06-23 04:15:08,027 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 04:17:59,850 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 04:17:59,851 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 42723)
+2026-06-23 04:18:00,146 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 04:18:02,875 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 04:18:02,875 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:18:07,463 | INFO | duckdb_writer | Batch 0: no rows – skipping.
+2026-06-23 04:18:10,195 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:18:13,560 | INFO | duckdb_writer | Batch 1 done: 98 facts, 12 dead-letters.
+2026-06-23 04:18:20,243 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:18:23,010 | INFO | duckdb_writer | Batch 2 done: 119 facts, 6 dead-letters.
+2026-06-23 04:18:30,129 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:18:32,891 | INFO | duckdb_writer | Batch 3 done: 118 facts, 7 dead-letters.
+2026-06-23 04:18:40,096 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:18:42,811 | INFO | duckdb_writer | Batch 4 done: 118 facts, 8 dead-letters.
+2026-06-23 04:18:50,193 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:18:52,542 | INFO | duckdb_writer | Batch 5 done: 111 facts, 12 dead-letters.
+2026-06-23 04:20:07,121 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 04:20:07,121 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 46279)
+2026-06-23 04:20:07,315 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 04:20:09,093 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 04:20:09,093 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:20:16,746 | INFO | duckdb_writer | Batch 6 done: 923 facts, 51 dead-letters.
+2026-06-23 04:20:16,958 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:20:19,517 | INFO | duckdb_writer | Batch 7 done: 107 facts, 6 dead-letters.
+2026-06-23 04:20:20,118 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:20:22,429 | INFO | duckdb_writer | Batch 8 done: 37 facts, 4 dead-letters.
+2026-06-23 04:20:30,145 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:20:32,470 | INFO | duckdb_writer | Batch 9 done: 118 facts, 7 dead-letters.
+2026-06-23 04:20:40,144 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:20:42,446 | INFO | duckdb_writer | Batch 10 done: 118 facts, 9 dead-letters.
+2026-06-23 04:20:50,113 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:20:52,052 | INFO | duckdb_writer | Batch 11 done: 116 facts, 8 dead-letters.
+2026-06-23 04:21:00,098 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:21:02,051 | INFO | duckdb_writer | Batch 12 done: 116 facts, 9 dead-letters.
+2026-06-23 04:21:10,078 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:21:12,204 | INFO | duckdb_writer | Batch 13 done: 117 facts, 8 dead-letters.
+2026-06-23 04:21:20,116 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:21:21,796 | INFO | duckdb_writer | Batch 14 done: 120 facts, 5 dead-letters.
+2026-06-23 04:21:30,089 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:21:31,975 | INFO | duckdb_writer | Batch 15 done: 116 facts, 10 dead-letters.
+2026-06-23 04:21:40,113 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:21:42,188 | INFO | duckdb_writer | Batch 16 done: 121 facts, 5 dead-letters.
+2026-06-23 04:21:50,069 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:21:51,893 | INFO | duckdb_writer | Batch 17 done: 113 facts, 10 dead-letters.
+2026-06-23 04:22:00,105 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:22:02,187 | INFO | duckdb_writer | Batch 18 done: 118 facts, 6 dead-letters.
+2026-06-23 04:22:10,100 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:22:12,001 | INFO | duckdb_writer | Batch 19 done: 117 facts, 10 dead-letters.
+2026-06-23 04:22:20,118 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:22:22,187 | INFO | duckdb_writer | Batch 20 done: 118 facts, 9 dead-letters.
+2026-06-23 04:22:30,090 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:22:32,115 | INFO | duckdb_writer | Batch 21 done: 118 facts, 9 dead-letters.
+2026-06-23 04:22:40,126 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:22:42,046 | INFO | duckdb_writer | Batch 22 done: 120 facts, 6 dead-letters.
+2026-06-23 04:22:50,065 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:22:51,960 | INFO | duckdb_writer | Batch 23 done: 115 facts, 11 dead-letters.
+2026-06-23 04:23:00,099 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:23:02,144 | INFO | duckdb_writer | Batch 24 done: 119 facts, 8 dead-letters.
+2026-06-23 04:23:10,121 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:23:12,186 | INFO | duckdb_writer | Batch 25 done: 122 facts, 4 dead-letters.
+2026-06-23 04:23:20,190 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:23:22,139 | INFO | duckdb_writer | Batch 26 done: 56 facts, 3 dead-letters.
+2026-06-23 04:25:30,073 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:25:32,043 | INFO | duckdb_writer | Batch 27 done: 21 facts, 2 dead-letters.
+2026-06-23 04:25:40,118 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:25:42,031 | INFO | duckdb_writer | Batch 28 done: 119 facts, 8 dead-letters.
+2026-06-23 04:25:50,077 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:25:52,406 | INFO | duckdb_writer | Batch 29 done: 118 facts, 7 dead-letters.
+2026-06-23 04:26:00,202 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:26:02,629 | INFO | duckdb_writer | Batch 30 done: 120 facts, 5 dead-letters.
+2026-06-23 04:26:10,079 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:26:12,175 | INFO | duckdb_writer | Batch 31 done: 119 facts, 5 dead-letters.
+2026-06-23 04:26:20,093 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:26:22,220 | INFO | duckdb_writer | Batch 32 done: 118 facts, 10 dead-letters.
+2026-06-23 04:26:30,087 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:26:32,185 | INFO | duckdb_writer | Batch 33 done: 116 facts, 12 dead-letters.
+2026-06-23 04:26:40,086 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 04:26:41,745 | ERROR | duckdb_writer | Batch 34 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 65, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.IOException: IO Error: Could not set lock on file "/home/khalidabdelrazk/retail_warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 356453) by user khalidabdelrazk. See also https://duckdb.org/docs/connect/concurrency
+2026-06-23 04:26:46,762 | ERROR | duckdb_writer | Batch 34 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 65, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.IOException: IO Error: Could not set lock on file "/home/khalidabdelrazk/retail_warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 356453) by user khalidabdelrazk. See also https://duckdb.org/docs/connect/concurrency
+2026-06-23 04:26:56,796 | ERROR | duckdb_writer | Batch 34 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 65, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.IOException: IO Error: Could not set lock on file "/home/khalidabdelrazk/retail_warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 356453) by user khalidabdelrazk. See also https://duckdb.org/docs/connect/concurrency
+2026-06-23 04:26:56,796 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 65, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.IOException: IO Error: Could not set lock on file "/home/khalidabdelrazk/retail_warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 356453) by user khalidabdelrazk. See also https://duckdb.org/docs/connect/concurrency
+2026-06-23 04:26:56,973 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 16:19:19,261 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 16:19:19,261 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 40455)
+2026-06-23 16:19:19,825 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 16:23:00,859 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 16:23:00,859 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 39859)
+2026-06-23 16:23:01,402 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 16:23:55,629 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 16:23:55,629 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 44119)
+2026-06-23 16:23:55,860 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 16:23:57,559 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 16:23:57,559 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 16:24:00,646 | INFO | duckdb_writer | Batch 0: no rows – skipping.
+2026-06-23 16:24:00,986 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 16:24:04,175 | ERROR | duckdb_writer | Batch 1 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:24:09,207 | ERROR | duckdb_writer | Batch 1 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:24:19,238 | ERROR | duckdb_writer | Batch 1 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:24:19,239 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:24:19,371 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 16:25:21,823 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 16:25:21,823 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 43549)
+2026-06-23 16:25:21,998 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 16:25:23,083 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 16:25:23,084 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 16:25:28,325 | ERROR | duckdb_writer | Batch 1 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:25:33,372 | ERROR | duckdb_writer | Batch 1 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:25:43,402 | ERROR | duckdb_writer | Batch 1 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:25:43,402 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:25:43,604 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 16:27:29,063 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 16:27:29,063 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 46589)
+2026-06-23 16:27:29,264 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 16:27:30,720 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 16:27:30,720 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 16:27:35,473 | ERROR | duckdb_writer | Batch 1 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:27:40,493 | ERROR | duckdb_writer | Batch 1 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:27:50,520 | ERROR | duckdb_writer | Batch 1 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:27:50,520 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:27:50,746 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 16:31:27,156 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 16:31:27,156 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 40731)
+2026-06-23 16:31:27,360 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 16:31:28,522 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 16:31:28,522 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 16:31:33,538 | ERROR | duckdb_writer | Batch 1 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:31:38,559 | ERROR | duckdb_writer | Batch 1 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:31:48,587 | ERROR | duckdb_writer | Batch 1 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:31:48,588 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 76, in _commit_batch
+    _insert_dead_letters(con, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 354, in _insert_dead_letters
+    base = _next_key(con, "dead_letter_events", "dead_letter_key")
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 107, in _next_key
+    row = con.execute(f"SELECT coalesce(max({pk_col}), 0) FROM {table}").fetchone()
+_duckdb.CatalogException: Catalog Error: Table with name dead_letter_events does not exist!
+Did you mean "pg_prepared_statements"?
+
+LINE 1: SELECT coalesce(max(dead_letter_key), 0) FROM dead_letter_events
+                                                      ^
+2026-06-23 16:31:48,818 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 16:39:33,253 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 16:39:33,254 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 33687)
+2026-06-23 16:39:33,635 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 16:39:37,532 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 16:39:37,533 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 16:39:47,679 | ERROR | duckdb_writer | Batch 0 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.SerializationException: Serialization Error: Failed to deserialize: expected end of object, but found field id: 103
+2026-06-23 16:39:52,694 | ERROR | duckdb_writer | Batch 0 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.SerializationException: Serialization Error: Failed to deserialize: expected end of object, but found field id: 103
+2026-06-23 16:40:02,711 | ERROR | duckdb_writer | Batch 0 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.SerializationException: Serialization Error: Failed to deserialize: expected end of object, but found field id: 103
+2026-06-23 16:40:02,712 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+duckdb.duckdb.SerializationException: Serialization Error: Failed to deserialize: expected end of object, but found field id: 103
+2026-06-23 16:40:02,869 | INFO | py4j.clientserver | Closing down clientserver connection

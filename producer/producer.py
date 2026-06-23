@@ -28,7 +28,7 @@ from config.config import (  # noqa: E402
     LOG_DIR,
     PRODUCER_LOG_FILE,
 )
-from data_generator import RetailEventGenerator  # noqa: E402
+from .data_generator import RetailEventGenerator  # noqa: E402
 
 
 def configure_logging() -> logging.Logger:
@@ -94,7 +94,7 @@ def main() -> None:
                 sent += 1
                 if sent % 100 == 0:
                     logger.info(
-                        "Sent %,d events. Latest type=%s timestamp=%s",
+                        "Sent %d events. Latest type=%s timestamp=%s",
                         sent,
                         event.get("event_type"),
                         event.get("event_timestamp"),
@@ -107,7 +107,7 @@ def main() -> None:
     finally:
         producer.flush(timeout=30)
         producer.close(timeout=30)
-        logger.info("Producer closed after sending %,d events.", sent)
+        logger.info("Producer closed after sending %d events.", sent)
 
 
 if __name__ == "__main__":

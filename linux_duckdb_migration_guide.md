@@ -373,3 +373,14 @@ sudo systemctl status kafka
 | Excessive Spark log output | Add `--conf spark.driver.extraJavaOptions="-Dlog4j.logLevel=WARN"` |
 | `fact_sales` is empty after pipeline runs | Check `dead_letter_events` for rejection reasons; confirm producer is publishing to `retail_events`. |
 | Checkpoint conflicts after restart | Delete `checkpoints/retail_events/` and restart `spark_stream.py`. |
+
+
+
+
+ python3 -m producer.producer
+
+
+spark-submit \
+    --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 \
+    --conf spark.driver.extraJavaOptions="-Dlog4j.logLevel=WARN" \
+    spark/spark_stream.py
