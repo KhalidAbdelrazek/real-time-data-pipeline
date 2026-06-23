@@ -1482,3 +1482,544 @@ duckdb.duckdb.SerializationException: Serialization Error: Failed to deserialize
 2026-06-23 16:44:12,352 | INFO | duckdb_writer | Batch 5 done: 70 facts, 6 dead-letters.
 2026-06-23 16:44:20,129 | INFO | py4j.clientserver | Received command c on object id p0
 2026-06-23 16:44:22,115 | INFO | duckdb_writer | Batch 6 done: 71 facts, 5 dead-letters.
+2026-06-23 17:06:53,710 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 17:06:53,710 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 42725)
+2026-06-23 17:06:53,887 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 17:06:55,324 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 17:06:55,324 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:07:00,191 | INFO | duckdb_writer | Batch 7 done: 223 facts, 14 dead-letters.
+2026-06-23 17:07:00,350 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:07:02,413 | INFO | duckdb_writer | Batch 8 done: 70 facts, 5 dead-letters.
+2026-06-23 17:07:10,099 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:07:12,508 | INFO | duckdb_writer | Batch 9 done: 109 facts, 11 dead-letters.
+2026-06-23 17:07:20,121 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:07:22,318 | INFO | duckdb_writer | Batch 10 done: 116 facts, 7 dead-letters.
+2026-06-23 17:07:30,116 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:07:32,250 | INFO | duckdb_writer | Batch 11 done: 115 facts, 11 dead-letters.
+2026-06-23 17:07:40,091 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:07:42,125 | INFO | duckdb_writer | Batch 12 done: 121 facts, 5 dead-letters.
+2026-06-23 17:07:50,088 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:07:51,910 | INFO | duckdb_writer | Batch 13 done: 118 facts, 8 dead-letters.
+2026-06-23 17:08:00,079 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:08:02,187 | INFO | duckdb_writer | Batch 14 done: 114 facts, 8 dead-letters.
+2026-06-23 17:08:10,111 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:08:12,107 | INFO | duckdb_writer | Batch 15 done: 118 facts, 6 dead-letters.
+2026-06-23 17:08:20,093 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:08:22,080 | INFO | duckdb_writer | Batch 16 done: 116 facts, 9 dead-letters.
+2026-06-23 17:08:30,091 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:08:31,947 | INFO | duckdb_writer | Batch 17 done: 119 facts, 7 dead-letters.
+2026-06-23 17:08:40,109 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:08:42,149 | INFO | duckdb_writer | Batch 18 done: 117 facts, 7 dead-letters.
+2026-06-23 17:08:50,122 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:08:51,888 | INFO | duckdb_writer | Batch 19 done: 113 facts, 11 dead-letters.
+2026-06-23 17:09:00,086 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:09:02,102 | INFO | duckdb_writer | Batch 20 done: 117 facts, 10 dead-letters.
+2026-06-23 17:09:10,120 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:09:12,131 | INFO | duckdb_writer | Batch 21 done: 124 facts, 3 dead-letters.
+2026-06-23 17:09:20,109 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:09:21,977 | INFO | duckdb_writer | Batch 22 done: 117 facts, 5 dead-letters.
+2026-06-23 17:09:30,082 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:09:32,064 | INFO | duckdb_writer | Batch 23 done: 119 facts, 7 dead-letters.
+2026-06-23 17:09:40,099 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:09:41,924 | INFO | duckdb_writer | Batch 24 done: 119 facts, 7 dead-letters.
+2026-06-23 17:09:50,126 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:09:52,107 | INFO | duckdb_writer | Batch 25 done: 118 facts, 8 dead-letters.
+2026-06-23 17:10:00,077 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:10:01,845 | INFO | duckdb_writer | Batch 26 done: 121 facts, 6 dead-letters.
+2026-06-23 17:10:10,125 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:10:12,159 | INFO | duckdb_writer | Batch 27 done: 113 facts, 13 dead-letters.
+2026-06-23 17:10:20,096 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:10:21,945 | INFO | duckdb_writer | Batch 28 done: 119 facts, 4 dead-letters.
+2026-06-23 17:10:30,079 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:10:31,858 | INFO | duckdb_writer | Batch 29 done: 119 facts, 7 dead-letters.
+2026-06-23 17:10:40,087 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:10:41,992 | INFO | duckdb_writer | Batch 30 done: 117 facts, 7 dead-letters.
+2026-06-23 17:10:50,066 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:10:51,759 | INFO | duckdb_writer | Batch 31 done: 115 facts, 9 dead-letters.
+2026-06-23 17:11:00,074 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:11:02,064 | INFO | duckdb_writer | Batch 32 done: 117 facts, 7 dead-letters.
+2026-06-23 17:11:10,076 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:11:12,144 | INFO | duckdb_writer | Batch 33 done: 116 facts, 10 dead-letters.
+2026-06-23 17:11:20,062 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:11:21,774 | INFO | duckdb_writer | Batch 34 done: 120 facts, 6 dead-letters.
+2026-06-23 17:11:30,130 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:11:32,076 | INFO | duckdb_writer | Batch 35 done: 122 facts, 5 dead-letters.
+2026-06-23 17:11:40,087 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:11:42,071 | INFO | duckdb_writer | Batch 36 done: 122 facts, 6 dead-letters.
+2026-06-23 17:11:50,095 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:11:51,888 | INFO | duckdb_writer | Batch 37 done: 120 facts, 6 dead-letters.
+2026-06-23 17:12:00,084 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:12:01,939 | INFO | duckdb_writer | Batch 38 done: 113 facts, 11 dead-letters.
+2026-06-23 17:12:10,082 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:12:11,839 | INFO | duckdb_writer | Batch 39 done: 121 facts, 7 dead-letters.
+2026-06-23 17:12:20,108 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:12:21,905 | INFO | duckdb_writer | Batch 40 done: 120 facts, 4 dead-letters.
+2026-06-23 17:12:30,080 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:12:31,949 | INFO | duckdb_writer | Batch 41 done: 118 facts, 8 dead-letters.
+2026-06-23 17:12:40,096 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:12:41,969 | INFO | duckdb_writer | Batch 42 done: 123 facts, 4 dead-letters.
+2026-06-23 17:12:50,107 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:12:52,054 | INFO | duckdb_writer | Batch 43 done: 119 facts, 8 dead-letters.
+2026-06-23 17:13:00,075 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:13:02,031 | INFO | duckdb_writer | Batch 44 done: 115 facts, 11 dead-letters.
+2026-06-23 17:13:10,101 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:13:12,060 | INFO | duckdb_writer | Batch 45 done: 117 facts, 10 dead-letters.
+2026-06-23 17:13:20,099 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:13:21,951 | INFO | duckdb_writer | Batch 46 done: 118 facts, 10 dead-letters.
+2026-06-23 17:13:30,073 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:13:32,002 | INFO | duckdb_writer | Batch 47 done: 119 facts, 5 dead-letters.
+2026-06-23 17:13:40,074 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:13:41,824 | INFO | duckdb_writer | Batch 48 done: 122 facts, 4 dead-letters.
+2026-06-23 17:13:50,088 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:13:52,029 | INFO | duckdb_writer | Batch 49 done: 114 facts, 12 dead-letters.
+2026-06-23 17:13:55,529 | INFO | py4j.clientserver | Error while receiving.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=18>
+2026-06-23 17:13:55,529 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:13:55,529 | ERROR | root | Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=18>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2026-06-23 17:13:55,532 | INFO | py4j.clientserver | Error while receiving.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o21.sc
+2026-06-23 17:13:55,535 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:13:55,535 | ERROR | root | Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o21.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2026-06-23 17:13:55,536 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:13:55,591 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:14:06,520 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 17:14:06,521 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 37411)
+2026-06-23 17:14:06,707 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 17:14:08,389 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 17:14:08,389 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:14:13,611 | INFO | duckdb_writer | Batch 50 done: 207 facts, 9 dead-letters.
+2026-06-23 17:14:13,826 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:14:16,384 | INFO | duckdb_writer | Batch 51 done: 78 facts, 4 dead-letters.
+2026-06-23 17:14:20,118 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:14:22,444 | INFO | duckdb_writer | Batch 52 done: 74 facts, 6 dead-letters.
+2026-06-23 17:14:30,094 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:14:32,348 | INFO | duckdb_writer | Batch 53 done: 118 facts, 8 dead-letters.
+2026-06-23 17:14:40,082 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:14:42,363 | INFO | duckdb_writer | Batch 54 done: 117 facts, 8 dead-letters.
+2026-06-23 17:14:50,084 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:14:52,309 | INFO | duckdb_writer | Batch 55 done: 119 facts, 6 dead-letters.
+2026-06-23 17:15:00,085 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:15:02,276 | INFO | duckdb_writer | Batch 56 done: 120 facts, 7 dead-letters.
+2026-06-23 17:15:10,121 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:15:11,967 | INFO | duckdb_writer | Batch 57 done: 112 facts, 14 dead-letters.
+2026-06-23 17:15:20,096 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:15:22,140 | INFO | duckdb_writer | Batch 58 done: 118 facts, 10 dead-letters.
+2026-06-23 17:15:30,097 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:15:32,192 | INFO | duckdb_writer | Batch 59 done: 121 facts, 5 dead-letters.
+2026-06-23 17:15:40,092 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:15:42,166 | INFO | duckdb_writer | Batch 60 done: 117 facts, 8 dead-letters.
+2026-06-23 17:15:50,100 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:15:52,150 | INFO | duckdb_writer | Batch 61 done: 114 facts, 9 dead-letters.
+2026-06-23 17:16:00,094 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:16:02,087 | INFO | duckdb_writer | Batch 62 done: 112 facts, 12 dead-letters.
+2026-06-23 17:16:10,068 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:16:12,077 | INFO | duckdb_writer | Batch 63 done: 118 facts, 8 dead-letters.
+2026-06-23 17:16:20,102 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:16:21,889 | INFO | duckdb_writer | Batch 64 done: 116 facts, 12 dead-letters.
+2026-06-23 17:16:30,064 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:16:31,970 | INFO | duckdb_writer | Batch 65 done: 117 facts, 9 dead-letters.
+2026-06-23 17:16:40,113 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:16:42,181 | INFO | duckdb_writer | Batch 66 done: 119 facts, 6 dead-letters.
+2026-06-23 17:16:50,114 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:16:52,216 | INFO | duckdb_writer | Batch 67 done: 119 facts, 4 dead-letters.
+2026-06-23 17:17:00,083 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:17:02,161 | INFO | duckdb_writer | Batch 68 done: 115 facts, 12 dead-letters.
+2026-06-23 17:17:10,110 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:17:11,905 | INFO | duckdb_writer | Batch 69 done: 120 facts, 6 dead-letters.
+2026-06-23 17:17:20,092 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:17:21,950 | INFO | duckdb_writer | Batch 70 done: 123 facts, 2 dead-letters.
+2026-06-23 17:17:30,080 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:17:31,879 | INFO | duckdb_writer | Batch 71 done: 114 facts, 13 dead-letters.
+2026-06-23 17:17:40,111 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:17:42,099 | INFO | duckdb_writer | Batch 72 done: 125 facts, 3 dead-letters.
+2026-06-23 17:17:50,061 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:17:51,971 | INFO | duckdb_writer | Batch 73 done: 121 facts, 5 dead-letters.
+2026-06-23 17:18:00,075 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:18:02,081 | INFO | duckdb_writer | Batch 74 done: 120 facts, 6 dead-letters.
+2026-06-23 17:18:10,104 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:18:11,934 | INFO | duckdb_writer | Batch 75 done: 120 facts, 7 dead-letters.
+2026-06-23 17:18:19,205 | INFO | py4j.clientserver | Error while receiving.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=18>
+2026-06-23 17:18:19,205 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:18:19,205 | ERROR | root | Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=18>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2026-06-23 17:18:19,209 | INFO | py4j.clientserver | Error while receiving.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o21.sc
+2026-06-23 17:18:19,211 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:18:19,211 | ERROR | root | Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o21.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2026-06-23 17:18:19,211 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:18:19,265 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:19:59,878 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 17:19:59,878 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 34327)
+2026-06-23 17:20:00,175 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 17:20:02,342 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 17:20:02,342 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:20:08,391 | INFO | duckdb_writer | Batch 76 done: 239 facts, 23 dead-letters.
+2026-06-23 17:20:10,141 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:20:13,104 | INFO | duckdb_writer | Batch 77 done: 107 facts, 7 dead-letters.
+2026-06-23 17:20:20,178 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:20:22,989 | INFO | duckdb_writer | Batch 78 done: 119 facts, 3 dead-letters.
+2026-06-23 17:20:30,096 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:20:32,716 | INFO | duckdb_writer | Batch 79 done: 119 facts, 6 dead-letters.
+2026-06-23 17:20:40,121 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:20:42,323 | INFO | duckdb_writer | Batch 80 done: 122 facts, 3 dead-letters.
+2026-06-23 17:20:50,117 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:20:52,446 | INFO | duckdb_writer | Batch 81 done: 114 facts, 12 dead-letters.
+2026-06-23 17:21:00,105 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:21:02,021 | INFO | duckdb_writer | Batch 82 done: 116 facts, 6 dead-letters.
+2026-06-23 17:21:10,134 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:21:12,155 | INFO | duckdb_writer | Batch 83 done: 121 facts, 6 dead-letters.
+2026-06-23 17:21:20,118 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:21:22,190 | INFO | duckdb_writer | Batch 84 done: 119 facts, 8 dead-letters.
+2026-06-23 17:21:30,083 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:21:31,988 | INFO | duckdb_writer | Batch 85 done: 121 facts, 6 dead-letters.
+2026-06-23 17:21:40,094 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:21:43,082 | INFO | duckdb_writer | Batch 86 done: 118 facts, 10 dead-letters.
+2026-06-23 17:21:50,098 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:21:52,506 | INFO | duckdb_writer | Batch 87 done: 120 facts, 4 dead-letters.
+2026-06-23 17:22:00,076 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:22:02,276 | INFO | duckdb_writer | Batch 88 done: 117 facts, 9 dead-letters.
+2026-06-23 17:22:10,093 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:22:12,140 | INFO | duckdb_writer | Batch 89 done: 123 facts, 6 dead-letters.
+2026-06-23 17:22:20,113 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:22:22,174 | INFO | duckdb_writer | Batch 90 done: 117 facts, 9 dead-letters.
+2026-06-23 17:22:30,087 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:22:32,140 | INFO | duckdb_writer | Batch 91 done: 121 facts, 5 dead-letters.
+2026-06-23 17:22:40,071 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:22:42,165 | INFO | duckdb_writer | Batch 92 done: 123 facts, 3 dead-letters.
+2026-06-23 17:22:50,093 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:22:51,907 | INFO | duckdb_writer | Batch 93 done: 117 facts, 11 dead-letters.
+2026-06-23 17:23:00,083 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:23:01,926 | INFO | duckdb_writer | Batch 94 done: 122 facts, 5 dead-letters.
+2026-06-23 17:23:10,080 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:23:11,994 | INFO | duckdb_writer | Batch 95 done: 119 facts, 8 dead-letters.
+2026-06-23 17:23:20,059 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:23:21,958 | INFO | duckdb_writer | Batch 96 done: 121 facts, 5 dead-letters.
+2026-06-23 17:23:30,121 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:23:32,039 | INFO | duckdb_writer | Batch 97 done: 125 facts, 4 dead-letters.
+2026-06-23 17:23:40,128 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:23:42,083 | INFO | duckdb_writer | Batch 98 done: 116 facts, 8 dead-letters.
+2026-06-23 17:23:50,078 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:23:52,158 | INFO | duckdb_writer | Batch 99 done: 120 facts, 7 dead-letters.
+2026-06-23 17:24:00,076 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:24:01,843 | INFO | duckdb_writer | Batch 100 done: 120 facts, 6 dead-letters.
+2026-06-23 17:24:10,060 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:24:12,019 | INFO | duckdb_writer | Batch 101 done: 124 facts, 2 dead-letters.
+2026-06-23 17:24:20,075 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:24:22,012 | INFO | duckdb_writer | Batch 102 done: 117 facts, 9 dead-letters.
+2026-06-23 17:24:30,082 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:24:32,010 | INFO | duckdb_writer | Batch 103 done: 117 facts, 8 dead-letters.
+2026-06-23 17:24:40,086 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:24:42,291 | INFO | duckdb_writer | Batch 104 done: 123 facts, 4 dead-letters.
+2026-06-23 17:24:50,098 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:24:51,979 | INFO | duckdb_writer | Batch 105 done: 120 facts, 5 dead-letters.
+2026-06-23 17:25:00,079 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:25:02,001 | INFO | duckdb_writer | Batch 106 done: 122 facts, 6 dead-letters.
+2026-06-23 17:25:10,103 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:25:11,856 | ERROR | duckdb_writer | Batch 107 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 27711) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:25:16,873 | ERROR | duckdb_writer | Batch 107 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 27711) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:25:26,894 | ERROR | duckdb_writer | Batch 107 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 27711) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:25:26,894 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 27711) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:25:27,192 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:31:29,768 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 17:31:29,769 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 40185)
+2026-06-23 17:31:29,970 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 17:31:31,119 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 17:31:31,119 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:31:35,407 | ERROR | duckdb_writer | Batch 107 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 27711) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:31:40,426 | ERROR | duckdb_writer | Batch 107 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 27711) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:31:43,133 | INFO | py4j.clientserver | Error while receiving.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=18>
+2026-06-23 17:31:43,134 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:31:43,134 | ERROR | root | Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=18>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2026-06-23 17:31:43,139 | INFO | py4j.clientserver | Error while receiving.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o21.sc
+2026-06-23 17:31:43,142 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:31:43,142 | ERROR | root | Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 381, in signal_handler
+    self.cancelAllJobs()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 2446, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o21.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+2026-06-23 17:31:43,142 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:31:43,196 | INFO | py4j.clientserver | Closing down clientserver connection
+2026-06-23 17:32:18,777 | INFO | py4j.java_gateway | Callback Server Starting
+2026-06-23 17:32:18,778 | INFO | py4j.java_gateway | Socket listening on ('127.0.0.1', 40255)
+2026-06-23 17:32:19,161 | INFO | retail_spark_stream | Streaming from Kafka topic 'retail_events'. Press Ctrl+C to stop.
+2026-06-23 17:32:21,995 | INFO | py4j.clientserver | Python Server ready to receive messages
+2026-06-23 17:32:21,999 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:32:30,006 | INFO | duckdb_writer | Batch 107 done: 118 facts, 7 dead-letters.
+2026-06-23 17:32:30,345 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:32:39,420 | INFO | duckdb_writer | Batch 108 done: 5028 facts, 310 dead-letters.
+2026-06-23 17:32:40,286 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:32:43,117 | INFO | duckdb_writer | Batch 109 done: 115 facts, 8 dead-letters.
+2026-06-23 17:32:50,102 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:32:52,614 | INFO | duckdb_writer | Batch 110 done: 113 facts, 10 dead-letters.
+2026-06-23 17:33:00,194 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:33:03,083 | INFO | duckdb_writer | Batch 111 done: 115 facts, 7 dead-letters.
+2026-06-23 17:33:10,250 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:33:13,135 | ERROR | duckdb_writer | Batch 112 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 33290) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:33:18,156 | ERROR | duckdb_writer | Batch 112 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 33290) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:33:29,135 | INFO | duckdb_writer | Batch 112 done: 115 facts, 10 dead-letters.
+2026-06-23 17:33:29,360 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:33:32,581 | INFO | duckdb_writer | Batch 113 done: 212 facts, 19 dead-letters.
+2026-06-23 17:33:32,809 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:33:35,266 | INFO | duckdb_writer | Batch 114 done: 43 facts, 0 dead-letters.
+2026-06-23 17:33:40,125 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:33:42,260 | INFO | duckdb_writer | Batch 115 done: 87 facts, 4 dead-letters.
+2026-06-23 17:33:50,074 | INFO | py4j.clientserver | Received command c on object id p0
+2026-06-23 17:33:51,719 | ERROR | duckdb_writer | Batch 116 attempt 1/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 33290) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:33:56,754 | ERROR | duckdb_writer | Batch 116 attempt 2/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 33290) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:34:06,789 | ERROR | duckdb_writer | Batch 116 attempt 3/3 failed.
+Traceback (most recent call last):
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 33290) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:34:06,790 | ERROR | py4j.clientserver | There was an exception while executing the Python Proxy on the Python Side.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 617, in _call_proxy
+    return_value = getattr(self.pool[obj_id], method)(*params)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 120, in call
+    raise e
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 117, in call
+    self.func(DataFrame(jdf, wrapped_session_jdf), batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/spark_stream.py", line 92, in foreach_batch
+    write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 49, in write_microbatch_to_duckdb
+    _commit_batch(valid_rows, invalid_rows, batch_id)
+  File "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/duckdb_writer.py", line 81, in _commit_batch
+    con = duckdb.connect(str(DUCKDB_PATH), read_only=False)
+_duckdb.IOException: IO Error: Could not set lock on file "/media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/warehouse/RetailDW.duckdb": Conflicting lock is held in /usr/share/dbeaver-ce/jre/bin/java (PID 33290) by user khalidabdelrazk. See also https://duckdb.org/docs/stable/connect/concurrency
+2026-06-23 17:34:07,248 | INFO | py4j.clientserver | Closing down clientserver connection
