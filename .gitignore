@@ -1,0 +1,31 @@
+# ── ENVIRONMENT ───────────────────────────────────────────────────────────────
+.venv/
+venv/
+ENV/
+
+# ── PYTHON CACHE ──────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# ── SPARK CHECKPOINTS & METADATA ──────────────────────────────────────────────
+checkpoints/
+.metadata
+*.crc
+
+# ── LOGS ──────────────────────────────────────────────────────────────────────
+logs/*.log
+*.log
+
+# ── DATAWAREHOUSE / DATABASES ─────────────────────────────────────────────────
+# warehouse/RetailDW.duckdb
+# warehouse/RetailDW.duckdb.tmp/
+# *.duckdb
+# *.db
+
+# ── IDE & SYSTEM ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
