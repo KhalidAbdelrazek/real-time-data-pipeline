@@ -384,3 +384,6 @@ spark-submit \
     --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 \
     --conf spark.driver.extraJavaOptions="-Dlog4j.logLevel=WARN" \
     spark/spark_stream.py
+
+spark-submit     --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1     --conf spark.driver.extraJavaOptions="-Dlog4j.logLevel=WARN"     --conf spark.hadoop.fs.defaultFS="file:///"     spark/spark_stream.py
+
