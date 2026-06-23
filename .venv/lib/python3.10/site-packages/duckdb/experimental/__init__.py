@@ -1,2 +1,5 @@
-from . import spark
-__all__ = spark.__all__
+from . import spark  # noqa: D104
+
+__all__ = [
+    "spark",
+]
