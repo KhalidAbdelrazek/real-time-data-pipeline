@@ -24,10 +24,13 @@ _default_duckdb = str(PROJECT_ROOT / "warehouse" / "RetailDW.duckdb")
 DUCKDB_PATH = Path(os.getenv("DUCKDB_PATH", _default_duckdb))
 
 # ── Spark ─────────────────────────────────────────────────────────────────────
-SPARK_CHECKPOINT_DIR = os.getenv(
-    "SPARK_CHECKPOINT_DIR",
-    str(PROJECT_ROOT / "checkpoints" / "retail_events"),
-)
+# SPARK_CHECKPOINT_DIR = os.getenv(
+#     "SPARK_CHECKPOINT_DIR",
+#     str(PROJECT_ROOT / "checkpoints" / "retail_events"),
+# )
+# Inside config/config.py
+# Example:
+SPARK_CHECKPOINT_DIR = "file:///media/khalidabdelrazk/01DC6291362F9420/real-time data pipeline/spark/checkpoints"
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 LOG_DIR           = PROJECT_ROOT / "logs"

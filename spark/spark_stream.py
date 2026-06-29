@@ -91,9 +91,16 @@ def main() -> None:
         invalid_batch = invalid_events(normalized)
         write_microbatch_to_duckdb(valid_batch, invalid_batch, batch_id)
 
+    # query = (
+    #     parsed.writeStream.foreachBatch(foreach_batch)
+    #     .option("checkpointLocation", SPARK_CHECKPOINT_DIR)
+    #     .trigger(processingTime="10 seconds")
+    #     .start()
+    # )
     query = (
         parsed.writeStream.foreachBatch(foreach_batch)
-        .option("checkpointLocation", SPARK_CHECKPOINT_DIR)
+        # Force Spark to use the local filesystem instead of HDFS
+        .option("checkpointLocation", f"file://{Path(SPARK_CHECKPOINT_DIR).resolve()}")
         .trigger(processingTime="10 seconds")
         .start()
     )

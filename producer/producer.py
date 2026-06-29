@@ -32,6 +32,17 @@ from .data_generator import RetailEventGenerator  # noqa: E402
 
 
 def configure_logging() -> logging.Logger:
+    """
+    Configure application logging.
+
+    Creates the log directory (if it doesn't already exist), then
+    configures logging to output messages to both:
+        - the terminal
+        - a log file
+
+    Returns:
+        logging.Logger: Configured logger instance for the producer.
+    """
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(
         level=logging.INFO,
@@ -48,6 +59,17 @@ logger = configure_logging()
 
 
 def parse_args() -> argparse.Namespace:
+    """
+    Parse command-line arguments.
+
+    Allows users to override default Kafka settings and
+    event generation parameters without modifying the code.
+
+    Returns:
+        argparse.Namespace:
+            Parsed command-line arguments.
+    """
+    
     parser = argparse.ArgumentParser(description="Continuously stream retail events to Kafka.")
     parser.add_argument("--bootstrap-servers", default=KAFKA_BOOTSTRAP_SERVERS)
     parser.add_argument("--topic", default=KAFKA_TOPIC)
@@ -58,6 +80,23 @@ def parse_args() -> argparse.Namespace:
 
 
 def build_producer(bootstrap_servers: str) -> KafkaProducer:
+    """
+    Create and configure a Kafka producer.
+
+    Configuration includes:
+        - waiting for all replicas to acknowledge writes (acks='all')
+        - automatic retries
+        - JSON serialization for message values
+        - UTF-8 encoding for message keys
+
+    Args:
+        bootstrap_servers:
+            Kafka broker address(es).
+
+    Returns:
+        KafkaProducer:
+            Configured Kafka producer instance.
+    """
     return KafkaProducer(
         bootstrap_servers=bootstrap_servers,
         acks="all",
